@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;        
+}
+
+main{
+    width: 500px;
+    height: 450px;
+    position: relative;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.content{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    inset: 0;
+    /* z-index: 0; */
+    opacity: 0;
+    animation: .7s scale forwards;
+    transition: .3s;
+}
+
+@keyframes scale {
+    from{
+        transform: scale(0.4);
+    }
+    to{
+        transform: scale(1.0);
+    }
+}
+
+.content1{
+    background-image: url(images/nx5sjc8hhiw71.webp);   
+    opacity: 1;
+}
+
+.content2{
+    background-image: url(images/nature.jpg);    
+}
+
+.content3{
+    background-image: url(images/sea.avif);    
+}
+
+.content4{
+    background-image: url(images/image2.jpg);    
+}
+
+.content5{
+    background-image: url(images/image.avif);    
+}
+
+
+.arrow{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    filter: drop-shadow(0 0 3px white);
+    cursor: pointer;
+}
+
+.arrow:active{
+    transform: translateY(-50%) scale(0.8);
+}
+
+.arrow1{
+    left: 0;
+}
+
+.arrow2{
+    right: 0;
+}
+
+.rounds{
+    width: 100%;
+    height: 30px;
+    position: absolute;
+    bottom: 0;
+    z-index: 555;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    background-color: rgba(0, 0, 0, 0.541);
+}
+
+.round{
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    border: 2px solid white;
+    cursor: pointer;
+    box-shadow: 0 0 5px black;
+}
+
+.round:nth-child(1){
+    background-color: white;
+}
